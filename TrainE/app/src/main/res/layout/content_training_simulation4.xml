@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="order"
+            type="com.techbros.traine.viewModels.OrderViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"><![CDATA[
+    tools:context=".TrainingSimulationActivity4"
+    tools:showIn="@layout/activity_training_simulation4">
+
+    ]]>
+
+    <ImageView
+        android:id="@+id/back_ground_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/raw_coffee"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/train_e_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/train_e"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rectangle_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rectangle_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/train_e_text_view" />
+
+    <ImageView
+        android:id="@+id/rectangle_thin_dark_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle_thin_dark_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_grey"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_grey"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_grey" />
+
+    <ImageView
+        android:id="@+id/red_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/red_dot"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_thin_red"
+        app:layout_constraintEnd_toStartOf="@+id/coffee_name"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_grey"
+        app:layout_constraintBottom_toTopOf="@+id/specification_text_view" />
+
+    <TextView
+        android:id="@+id/coffee_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@{order.name}"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/specification_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_grey"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_grey"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_thin_red" />
+
+    <TextView
+        android:id="@+id/specification_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@{order.specification}"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rectangle_thin_dark_grey"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_grey"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_grey"
+        app:layout_constraintTop_toBottomOf="@+id/coffee_name" />
+
+    <ImageView
+        android:id="@+id/rectangle_thin_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle_thin_red"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_grey"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_grey"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_grey" />
+
+    <TextView
+        android:id="@+id/destination_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/drive_thru"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_thin_red"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_thin_red"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_thin_red"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_thin_red" />
+
+    <TextView
+        android:id="@+id/flavor_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/flavor"
+        android:textColor="@android:color/white"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/flavor_image_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_grey" />
+
+
+    <ImageView
+        android:id="@+id/flavor_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/syrup_salted_caramel"
+        app:layout_constraintEnd_toStartOf="@+id/number_of_pumps_picker"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="@id/back_ground_image_view"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_grey" />
+
+    <NumberPicker
+        android:id="@+id/flavor_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/flavor"
+        android:theme="@style/NumberPickerTheme"
+        app:layout_constraintBottom_toTopOf="@id/primary_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/number_of_pumps_picker"
+        app:layout_constraintTop_toBottomOf="@+id/flavor_text_view" />
+
+    <NumberPicker
+        android:id="@+id/number_of_pumps_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/number_of_shots"
+        android:theme="@style/NumberPickerTheme"
+        android:translationX="@android:dimen/app_icon_size"
+        app:layout_constraintBottom_toTopOf="@+id/primary_button"
+        app:layout_constraintEnd_toStartOf="@+id/flavor_picker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flavor_text_view" />
+
+    <Button
+        android:id="@+id/primary_button"
+        android:layout_width="268dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:background="@android:color/holo_orange_light"
+        android:fontFamily="sans-serif"
+        android:text="@string/primary"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

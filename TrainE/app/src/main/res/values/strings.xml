@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">TrainE</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="toast_button_text">Toast</string>
+    <string name="random_button_text">Random</string>
+    <string name="count_button_text">Count</string>
+    <string name="toast_message">Hello Toast!</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+
+    <string name="fragment_first">fragment_first</string>
+    <string name="first_fragment_label">first_fragment_label</string>
+    <string name="fragment_second">fragment_second</string>
+    <string name="second_fragment_label">second_fragment_label</string>
+
+    <!-- Main menu string -->
+    <string name="train_e">TrainE</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_messege">Please log in with your employee access code.</string>
+    <string name="instructions_1"> A randomized order will come in, one at a time.</string>
+    <string name="instructions_2">Select the ingredients you need and complete the orders!</string>
+    <string name="start">Start</string>
+    <string name="title_activity_training_simulation">TrainingSimulationActivity</string>
+
+    <string name="shots">Shots</string>
+    <string name="number_of_shots">2</string>
+    <string name="shot_pull_time">Shot Pull Time: 19</string>
+
+    <string name="good">Good</string>
+    <string name="bad">Bad</string>
+
+    <string name="cold">Cold</string>
+    <string name="hot">Hot</string>
+
+    <string name="milk">Milk</string>
+    <string name="chilled">Chilled</string>
+    <string name="steamed">Steamed</string>
+
+    <string name="flavor">Flavor</string>
+    <string name="primary">Primary</string>
+    <string name="secondary">Secondary</string>
+
+    <string name="drive_thru">Drive-Thru - 0511</string>
+    <string name="coffee_name_placeholder">Coffee Name</string>
+    <string name="specification_placeholder">specification</string>
+    <string name="coffee_type">Coffee Type</string>
+    <string name="coffee_size">Coffee Size</string>
+
+    <string name="results">Results</string>
+    <string name="correct">You got everything Correct!</string>
+    <string name="wrong">Score: %37.5</string>
+    <string name="keep_going">Would you like to keep going?</string>
+    <string name="end">Finish</string>
+    <string name="next">Next</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_training_simulation2">TrainingSimulationActivity2</string>
+    <string name="title_activity_training_simulation3">TrainingSimulationActivity3</string>
+    <string name="title_activity_training_simulation4">TrainingSimulationActivity4</string>
+    <string name="title_activity_training_simulation5">TrainingSimulationActivity5</string>
+
+</resources>

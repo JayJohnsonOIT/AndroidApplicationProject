@@ -1,0 +1,75 @@
+package com.techbros.traine
+
+import android.content.Intent
+import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.animation.AlphaAnimation
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.techbros.traine.databinding.ContentTrainingSimulation3Binding
+import com.techbros.traine.viewModels.OrderViewModel
+import model.Order
+import model.UserAnswer
+
+class TrainingSimulationActivity3 : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.content_training_simulation3)
+
+        // Access our singleton order.
+        val orderView = OrderViewModel(Order)
+
+        // Bind the order viewmodel to the view.
+        val binding = DataBindingUtil.setContentView<ContentTrainingSimulation3Binding>(this, R.layout.content_training_simulation3)
+        binding.order = orderView
+
+        val milks = arrayOf("None", "Regular", "Chocolate", "Half & Half", "Low Fat", "Almond")
+        binding.milkPicker.minValue = 0
+        binding.milkPicker.maxValue = milks.size - 1
+        binding.milkPicker.wrapSelectorWheel = false
+        binding.milkPicker.displayedValues = milks
+        binding.milkPicker.setOnValueChangedListener { picker, oldVal, newVal ->
+            UserAnswer.milk = milks[newVal]
+        }
+
+        // Handle the button click.
+        binding.chilledButton.setOnClickListener() { view ->
+            UserAnswer.milkTemp = "Chilled"
+            view.startAnimation(AlphaAnimation(1f, 0.8f))
+            val intent = Intent(this, TrainingSimulationActivity4::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        binding.steamedButton.setOnClickListener { view ->
+            UserAnswer.milkTemp = "Steamed"
+            view.startAnimation(AlphaAnimation(1f, 0.8f))
+            val intent = Intent(this, TrainingSimulationActivity4::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        return when (item.itemId) {
+            R.id.action_settings -> true
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+}

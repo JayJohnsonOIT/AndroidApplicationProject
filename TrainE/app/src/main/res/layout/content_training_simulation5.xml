@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="order"
+            type="com.techbros.traine.viewModels.OrderViewModel" />
+        <variable
+            name="userAnswer"
+            type="com.techbros.traine.viewModels.UserAnswerViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".TrainingSimulationActivity5"
+        tools:showIn="@layout/activity_training_simulation5">
+
+        <ImageView
+            android:id="@+id/train_e_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/raw_coffee"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/results_messege_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/wrong"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/next_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/results_grid_layout" />
+
+        <TextView
+            android:id="@+id/results_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/results"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="64sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/results_grid_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/end_button"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_light"
+            android:fontFamily="sans-serif"
+            android:text="@string/end"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/next_button"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:fontFamily="sans-serif"
+            android:text="@string/next"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/end_button" />
+
+        <GridLayout
+            android:id="@+id/results_grid_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/results_messege_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/results_text_view"
+            android:columnCount="3"
+            android:orientation="horizontal" >
+
+            <TextView android:text="CATEG."
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:text="Correct"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="144sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:text="Choice"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="144sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:text="SHOT#"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_shot_text_view"
+                android:text="@{order.shots}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_shot_text_view"
+                android:text="@{userAnswer.shots}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="PULL"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_pull_text_view"
+                android:text="@{order.goodOrBad}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_pull_text_view"
+                android:text="@{userAnswer.goodOrBad}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="SIZE"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_size_text_view"
+                android:text="@{order.size}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_size_text_view"
+                android:text="@{userAnswer.size}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="TYPE"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_type_text_view"
+                android:text="@{order.type}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_type_text_view"
+                android:text="@{userAnswer.type}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="TEMP"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_temp_text_view"
+                android:text="@{order.temp}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_temp_text_view"
+                android:text="@{userAnswer.temp}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="MILK"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_milk_text_view"
+                android:text="@{order.milk}"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_milk_text_view"
+                android:text="@{userAnswer.milk}"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="TEMPM"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_milkTemp_text_view"
+                android:text="@{order.milkTemp}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_milkTemp_text_view"
+                android:text="@{userAnswer.milkTemp}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="FLAV1"
+                android:textAlignment="center"
+                android:textSize="32sp"
+
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_flavorPrimary_text_view"
+                android:text="@{order.flavorPrimary}"
+                android:textAlignment="center"
+                android:textSize="19sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_flavorPrimary_text_view"
+                android:text="@{userAnswer.flavorPrimary}"
+                android:textAlignment="center"
+                android:textSize="19sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="PUMP1"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_pumpsPrimary_text_view"
+                android:text="@{order.pumpsPrimary}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_pumpsPrimary_text_view"
+                android:text="@{userAnswer.pumpsPrimary}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="FLAV2"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_flavorSecondary_text_view"
+                android:text="@{order.flavorSecondary}"
+                android:textAlignment="center"
+                android:textSize="19sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_flavorSecondary_text_view"
+                android:text="@{userAnswer.flavorSecondary}"
+                android:textAlignment="center"
+                android:textSize="19sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/black" />
+
+            <TextView android:text="PUMP2"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_width="120sp"
+                android:background="@color/keyBackground"
+                android:textColor="@android:color/white" />
+
+            <TextView android:id="@+id/answer_pumpsSecondary_text_view"
+                android:text="@{order.pumpsSecondary}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
+
+            <TextView android:id="@+id/user_pumpsSecondary_text_view"
+                android:text="@{userAnswer.pumpsSecondary}"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:layout_height="44sp"
+                android:layout_width="144sp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/black" />
+
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

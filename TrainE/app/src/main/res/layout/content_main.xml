@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageView
+        android:id="@+id/back_ground_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/shots"
+        android:tint="@color/tint"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/main_menu_logo"
+        android:layout_width="206dp"
+        android:layout_height="62dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/train_e_logo"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_messege"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/train_e_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="72sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_messege"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sign_in_messege"
+        android:layout_width="345dp"
+        android:layout_height="66dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/sign_in_messege"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/key_pad_grid_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_menu_logo" />
+
+    <TextView
+        android:id="@+id/login_status"
+        android:layout_width="234dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key_pad_grid_layout" />
+
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="252dp"
+        android:layout_height="57dp"
+        android:background="@color/buttonBackground"
+        android:paddingHorizontal="10sp"
+        android:text="@string/sign_in"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        app:layout_anchor="@+id/include"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key_pad_grid_layout" />
+
+    <GridLayout
+        android:id="@+id/key_pad_grid_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_messege">
+
+        <Button
+            android:id="@+id/num1"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/num2"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/num3"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="3"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/num4"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="4"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/num5"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="5"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/num6"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="6"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/num7"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="7"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/num8"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="8"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/num9"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="9"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/num0"
+            android:layout_height="75dp"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill"
+            android:background="@color/keyBackground"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="48sp" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

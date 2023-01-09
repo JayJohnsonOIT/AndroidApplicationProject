@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F10808</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="correctAnswer">#42C847</color>
+    <color name="wrongAnswer">#BF1111</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="screenBackground">#2196F3</color>
+    <color name="buttonBackground">#E6DFDF</color>
+    <color name="keyBackground">#000000</color>
+    <color name="tint">#C4000000</color>
+    <color name="transparent">#00FF0000</color>
+</resources>

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Hazelnut Latte",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 2,
+    "milk": "Almond",
+    "flavorPrimary": "Hazelnut",
+    "pumpsPrimary":2,
+    "flavorSecondary": "None",
+    "pumpsSecondary":0,
+    "temp": "Hot"
+  },
+  {
+    "name": "Black Coffee",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 3,
+    "milk": "None",
+    "flavorPrimary": "None",
+    "pumpsPrimary":0,
+    "flavorSecondary": "None",
+    "pumpsSecondary":0,
+    "temp": "Hot"
+  },
+  {
+    "name": "Mountain Freeze",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 2,
+    "milk": "Chocolate",
+    "flavorPrimary": "Chocolate",
+    "pumpsPrimary":3,
+    "flavorSecondary": "Fudge",
+    "pumpsSecondary":2,
+    "temp": "Cold"
+  },
+  {
+    "name": "White Mocha",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 2,
+    "milk": "Regular",
+    "flavorPrimary": "White Chocolate",
+    "pumpsPrimary":4,
+    "flavorSecondary": "None",
+    "pumpsSecondary":0,
+    "temp": "Hot"
+  },
+  {
+    "name": "Caramel Delite",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 2,
+    "milk": "Low Fat",
+    "flavorPrimary": "Caramel",
+    "pumpsPrimary":3,
+    "flavorSecondary": "Cinnamon",
+    "pumpsSecondary":2,
+    "temp": "Hot"
+  },
+  {
+    "name": "Latte",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 1,
+    "milk": "Half & Half",
+    "flavorPrimary": "Sweetener",
+    "pumpsPrimary":4,
+    "flavorSecondary": "None",
+    "pumpsSecondary":0,
+    "temp": "Hot"
+  },
+  {
+    "name": "Double Trouble",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 4,
+    "milk": "Regular",
+    "flavorPrimary": "Sweetener",
+    "pumpsPrimary":4,
+    "flavorSecondary": "None",
+    "pumpsSecondary":0,
+    "temp": "Hot"
+  },
+  {
+    "name": "Cold Brew",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 3,
+    "milk": "None",
+    "flavorPrimary": "Sweetener",
+    "pumpsPrimary":2,
+    "flavorSecondary": "None",
+    "pumpsSecondary":0,
+    "temp": "Cold"
+  },
+  {
+    "name": "Wake Up Juice",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 10,
+    "milk": "None",
+    "flavorPrimary": "None",
+    "pumpsPrimary":0,
+    "flavorSecondary": "None",
+    "pumpsSecondary":0,
+    "temp": "Hot"
+  },
+  {
+    "name": "Arabella",
+    "type": "Coffee",
+    "size": "Medium",
+    "shots": 2,
+    "milk": "Almond",
+    "flavorPrimary": "Sweetener",
+    "pumpsPrimary":2,
+    "flavorSecondary": "Honey",
+    "pumpsSecondary":2,
+    "temp": "Hot"
+  }
+]

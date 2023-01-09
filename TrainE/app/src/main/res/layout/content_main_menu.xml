@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="order"
+            type="com.techbros.traine.viewModels.OrderViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainMenu"
+    tools:showIn="@layout/activity_main_menu">
+
+    <ImageView
+        android:id="@+id/back_ground_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shots"
+        android:tint="@color/tint"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-81dp" />
+
+    <TextView
+        android:id="@+id/instructions_1_text_view"
+        android:layout_width="345dp"
+        android:layout_height="66dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/instructions_1"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/instructions_2_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_menu_logo" />
+
+    <ImageView
+        android:id="@+id/main_menu_logo"
+        android:layout_width="206dp"
+        android:layout_height="62dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/train_e_logo"
+        app:layout_constraintBottom_toTopOf="@+id/instructions_1_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_ground_image_view" />
+
+    <TextView
+        android:id="@+id/instructions_2_text_view"
+        android:layout_width="345dp"
+        android:layout_height="66dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/instructions_2"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions_1_text_view" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="255sp"
+        android:layout_height="57sp"
+        android:layout_marginTop="128dp"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="10sp"
+        android:text="@string/start"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:layout_anchor="@+id/include"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions_2_text_view" />
+
+    <Button
+        android:id="@+id/log_out"
+        android:layout_width="102dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="65dp"
+        android:background="@android:color/transparent"
+        android:text="Log Out"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/start_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
